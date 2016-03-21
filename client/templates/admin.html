@@ -1,0 +1,20 @@
+<template name="admin">
+    <div class="container">
+        <div id="main" class="row-fluid">
+            <div class="admin-container">
+                <h1>admin stuffz...</h1>
+                <ul id="sortable">
+
+                    {{#each imgs}}
+                        <li class="pull-left admin-img" id="{{this.order}}" data-id="{{this._id}}">
+                            {{> img}}
+                        </li>
+                    {{/each}}
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    {{> dropzone contentType='images' multiple=true}}
+</template>
